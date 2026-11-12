@@ -252,7 +252,13 @@ const ScrollFloat: React.FC<ScrollFloatProps> = ({
       }
     });
 
-    return () => mm.revert();
+    // Patch local (e2company): o efeito roda de novo quando `mounted` muda; sem
+    // limpar o transform inline, o GSAP relê o yPercent antigo como `y` em px e
+    // as palavras ficam deslocadas para sempre.
+    return () => {
+      mm.revert();
+      gsap.set(targets, { clearProps: 'transform,opacity,willChange,transformOrigin' });
+    };
   }, [
     mounted,
     scrollContainerRef,
