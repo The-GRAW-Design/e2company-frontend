@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Consultoria } from "@/components/sections/consultoria/Consultoria";
 import { Formulario } from "@/components/sections/formulario/Formulario";
 import { Hero } from "@/components/sections/hero/Hero";
+import { Metodologia } from "@/components/sections/metodologia/Metodologia";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <Consultoria />
         <Formulario />
+        <Metodologia />
       </main>
     </>
   );
