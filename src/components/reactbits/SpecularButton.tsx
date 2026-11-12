@@ -471,7 +471,10 @@ const SpecularButton = ({
       gl.deleteBuffer(buffer);
       gl.deleteVertexArray(vao);
       gl.deleteProgram(program);
-      gl.getExtension('WEBGL_lose_context')?.loseContext();
+      // Patch local (e2company): não força `loseContext()` aqui. O componente
+      // não trata a restauração do contexto, e quando o efeito roda de novo no
+      // mesmo <canvas> (StrictMode/Fast Refresh) o `getContext` devolve o
+      // contexto perdido e o botão fica coberto de branco.
     };
   }, []);
 
