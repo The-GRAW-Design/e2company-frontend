@@ -6,6 +6,7 @@ import DecryptedText from "@/components/reactbits/DecryptedText";
 import StarBorder from "@/components/reactbits/StarBorder";
 import { contactHref, navLinks, siteConfig } from "@/config/site";
 import { Container } from "./Container";
+import { asset } from "@/lib/asset";
 
 /**
  * Header fixo (Figma: "SEÇÃO 1" > Frame 7 + Hot bar + Botão).
@@ -26,7 +27,7 @@ export function Header() {
         <Container className="flex h-[72px] items-center justify-between gap-6 lg:h-[100px]">
           <a href="#topo" aria-label={`${siteConfig.name} — voltar ao início`} className="shrink-0">
             <Image
-              src="/svg/logo-e2-company.svg"
+              src={asset("/svg/logo-e2-company.svg")}
               alt={siteConfig.name}
               width={211.892}
               height={47.9944}
@@ -76,7 +77,7 @@ export function Header() {
           >
             Entre em contato
             <Image
-              src="/svg/seta-pequena.svg"
+              src={asset("/svg/seta-pequena.svg")}
               alt=""
               width={22.6667}
               height={22.6667}

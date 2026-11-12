@@ -9,6 +9,7 @@ import JellyRadio from "@/components/reactbits/JellyRadio";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { cn } from "@/lib/cn";
 import { faixasFaturamento, opcoesConsultoria } from "./data";
+import { asset } from "@/lib/asset";
 
 const pill =
   "flex h-[52px] w-full items-center rounded-[41px] border border-cinza-500 px-[26px] sm:px-[35px] transition-colors focus-within:border-ciano-200";
@@ -20,7 +21,7 @@ function Label({ htmlFor, id, children }: { htmlFor?: string; id?: string; child
     <label htmlFor={htmlFor} id={id} className="text-sm text-white uppercase sm:text-base">
       {children}
       <Image
-        src="/svg/ponto-obrigatorio.svg"
+        src={asset("/svg/ponto-obrigatorio.svg")}
         alt=""
         width={4}
         height={4}

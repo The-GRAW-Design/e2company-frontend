@@ -4,6 +4,7 @@ import Image from "next/image";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import Magnet from "@/components/reactbits/Magnet";
 import { useSmoothScroll } from "@/providers/SmoothScrollProvider";
+import { asset } from "@/lib/asset";
 
 /**
  * "Botão de navegação" do Figma (x 1827, 19×51.78): fica fixo na lateral
@@ -29,7 +30,13 @@ export function NextSectionButton() {
             aria-label="Ir para a próxima seção"
             className="block cursor-pointer rounded-full"
           >
-            <Image src="/svg/botao-navegacao.svg" alt="" width={19} height={51.775} unoptimized />
+            <Image
+              src={asset("/svg/botao-navegacao.svg")}
+              alt=""
+              width={19}
+              height={51.775}
+              unoptimized
+            />
           </button>
         </Magnet>
       </AnimatedContent>

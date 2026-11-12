@@ -11,6 +11,7 @@ import { Chip } from "@/components/ui/Chip";
 import { StepCard } from "@/components/ui/StepCard";
 import { place } from "@/lib/design";
 import { passos } from "./data";
+import { asset } from "@/lib/asset";
 
 function ChipBrilho({ blur }: { blur?: number }) {
   return (
@@ -50,7 +51,7 @@ export function Metodologia() {
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden [--u:calc(100cqw/1920)] lg:block"
       >
         <div className="absolute" style={place(-780.86, -259.8, 2653.67, 1786.15)}>
-          <Image src="/svg/texto-hora-de-crescer.svg" alt="" fill unoptimized />
+          <Image src={asset("/svg/texto-hora-de-crescer.svg")} alt="" fill unoptimized />
         </div>
       </FadeContent>
 

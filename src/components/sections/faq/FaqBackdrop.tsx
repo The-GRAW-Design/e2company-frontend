@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import { u } from "@/lib/design";
+import { asset } from "@/lib/asset";
 
 /**
  * Fundo do FAQ reproduzindo o grupo "bg" do Figma. Os elementos do design
@@ -18,7 +19,7 @@ const ONDAS: {
   pad: string;
 }[] = [
   {
-    src: "/svg/bg-onda-1.svg",
+    src: asset("/svg/bg-onda-1.svg"),
     inset: "69.33% -0.53% -2.63% -30.78%",
     w: "hypot(-86.4922cqw, 9.63111cqh)",
     h: "hypot(-13.5078cqw, -90.3689cqh)",
@@ -26,7 +27,7 @@ const ONDAS: {
     pad: "-3.76% -4.55%",
   },
   {
-    src: "/svg/bg-onda-2.svg",
+    src: asset("/svg/bg-onda-2.svg"),
     inset: "70.62% -72.92% -9.32% -6.88%",
     w: "hypot(40.8755cqw, -49.6751cqh)",
     h: "hypot(59.1245cqw, 50.3249cqh)",
@@ -34,7 +35,7 @@ const ONDAS: {
     pad: "-3.76% -4.55%",
   },
   {
-    src: "/svg/bg-onda-3.svg",
+    src: asset("/svg/bg-onda-3.svg"),
     inset: "19.65% -134.48% -1.94% -125.1%",
     w: "hypot(-57.0682cqw, -33.9226cqh)",
     h: "hypot(42.9318cqw, -66.0774cqh)",
@@ -42,7 +43,7 @@ const ONDAS: {
     pad: "-1.78% -2.16%",
   },
   {
-    src: "/svg/bg-onda-4.svg",
+    src: asset("/svg/bg-onda-4.svg"),
     inset: "59.93% 28.69% 1.94% -91.41%",
     w: "hypot(63.6466cqw, -28.0463cqh)",
     h: "hypot(-36.3534cqw, -71.9537cqh)",
