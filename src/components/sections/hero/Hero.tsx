@@ -12,7 +12,7 @@ export function Hero() {
     <section
       id="topo"
       aria-label="Apresentação"
-      className="relative isolate flex flex-col pt-[120px] pb-10 lg:block lg:min-h-[51.04cqw] lg:pt-[21.46cqw] lg:pb-0"
+      className="relative isolate flex flex-col pt-[120px] pb-10 lg:block lg:min-h-[51.04cqw] lg:pt-[21.46cqw] lg:pb-12"
     >
       <HeroBackdrop />
       <HeroVisual />
