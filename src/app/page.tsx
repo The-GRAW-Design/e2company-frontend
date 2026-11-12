@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Consultoria } from "@/components/sections/consultoria/Consultoria";
+import { Crescimento } from "@/components/sections/crescimento/Crescimento";
 import { Diagnostico } from "@/components/sections/diagnostico/Diagnostico";
 import { Formulario } from "@/components/sections/formulario/Formulario";
 import { Hero } from "@/components/sections/hero/Hero";
@@ -18,6 +19,7 @@ export default function Home() {
         <Metodologia />
         <Diagnostico />
         <Proposito />
+        <Crescimento />
       </main>
     </>
   );
