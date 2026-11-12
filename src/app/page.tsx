@@ -1,4 +1,5 @@
 import ClickSpark from "@/components/reactbits/ClickSpark";
+import TargetCursor from "@/components/reactbits/TargetCursor";
 import { Header } from "@/components/layout/Header";
 import { NextSectionButton } from "@/components/layout/NextSectionButton";
 import { Consultoria } from "@/components/sections/consultoria/Consultoria";
@@ -22,6 +23,19 @@ export default function Home() {
       duration={480}
       glow={0.6}
     >
+      {/* React Bits: TargetCursor — mira que segue o cursor e trava em links e botões (só mouse). */}
+      <TargetCursor
+        targetSelector="a, button, [role='checkbox'], [role='radio'], [role='combobox']"
+        cursorColor="#ffffff"
+        cursorColorOnTarget="#ff820d"
+        blendMode="normal"
+        size={32}
+        cornerSize={10}
+        thickness={2}
+        padding={6}
+        dotSize={4}
+        spinDuration={3}
+      />
       <Header />
       <NextSectionButton />
       {/* `@container` habilita as unidades cqw usadas para seguir o grid de 1920px do Figma. */}
