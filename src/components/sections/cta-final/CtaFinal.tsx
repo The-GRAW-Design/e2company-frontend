@@ -76,7 +76,7 @@ export function CtaFinal() {
           duration={1}
           className="mt-auto py-10 lg:mt-[7.81cqw] lg:pb-[1.56cqw]"
         >
-          <p className="flex items-center justify-center gap-1 text-[10px] text-white">
+          <p className="flex items-center justify-center gap-1 text-[10px] text-white uppercase">
             <Image src="/svg/icone-link.svg" alt="" width={10.9876} height={10.9876} unoptimized />
             <span>
               DESENVOLVIDO POR <strong className="font-semibold">{siteConfig.credit.label}</strong>

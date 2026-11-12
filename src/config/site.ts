@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Crescimento não é sorte, é estratégia. A E² Company transforma negócios comuns em marcas fortes e lucrativas com posicionamento sólido e estratégias inteligentes.",
   locale: "pt_BR",
-  credit: { label: "DRIADE&CO", href: "#" },
+  credit: { label: "The Graw Design & Erik Elias" },
 } as const;
 
 export const navLinks = [
