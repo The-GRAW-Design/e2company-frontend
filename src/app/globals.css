@@ -1,26 +1,115 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------------------------------------------------------------
+ * Tokens de design (Figma: SITE-DEVELPMENT / Desktop)
+ * ------------------------------------------------------------- */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --color-ink: #050505;
+  --color-ciano: #2588c3;
+  --color-ciano-500: #3697d0;
+  --color-ciano-300: #90caed;
+  --color-ciano-200: #abdbf8;
+  --color-laranja: #ff820d;
+  --color-laranja-300: #ffb25a;
+  --color-laranja-700: #e24f00;
+  --color-navy-700: #253e4d;
+  --color-navy-950: #070f18;
+  --color-grafite-950: #131111;
+  --color-grafite-900: #1c1c1c;
+  --color-grafite-800: #292929;
+  --color-grafite-700: #323232;
+  --color-cinza-500: #747474;
+  --color-cinza-400: #a9a9a9;
+
+  --shadow-card: 0 4px 9.3px 0 rgb(0 0 0 / 0.44);
+  --shadow-card-profundo: 0 7px 23.65px #000;
+  --shadow-chip: 0 2px 3.1px rgb(0 0 0 / 0.25);
+
+  --container-site: 1640px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ---------------------------------------------------------------
+ * Gradientes do design como utilitários
+ * ------------------------------------------------------------- */
+@utility text-gradient-ciano {
+  background-image: linear-gradient(100deg, var(--color-ciano) 5.83%, var(--color-ciano-200) 100.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility text-gradient-ciano-claro {
+  background-image: linear-gradient(110deg, var(--color-ciano-500) 5.83%, var(--color-ciano-200) 100.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-prata {
+  background-image: linear-gradient(118deg, #fff 6.2%, #999 92.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-laranja {
+  background-image: linear-gradient(170deg, var(--color-laranja) 11.49%, var(--color-laranja-700) 114.91%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-laranja {
+  background-image: linear-gradient(162deg, var(--color-laranja) 11.49%, var(--color-laranja-700) 114.91%);
+}
+
+@utility bg-gradient-laranja-claro {
+  background-image: linear-gradient(173deg, var(--color-laranja) 39.58%, var(--color-laranja-300) 115.27%);
+}
+
+@utility bg-gradient-ciano {
+  background-image: linear-gradient(99deg, var(--color-ciano) 5.83%, var(--color-ciano-200) 100.66%);
+}
+
+/* Tags flutuantes do hero (Frame 44-47) */
+@utility bg-gradient-navy {
+  background-image: linear-gradient(205deg, var(--color-navy-700) 33.27%, var(--color-navy-950) 110.07%);
+}
+
+/* Cards "Descrição" da seção de consultoria */
+@utility bg-card-profundo {
+  background-image:
+    radial-gradient(120% 90% at 36% 35%, transparent 54%, rgb(121 121 121 / 0.31) 96%),
+    linear-gradient(137.68deg, #000 6.81%, #001227 121.5%);
+}
+
+/* ---------------------------------------------------------------
+ * Base
+ * ------------------------------------------------------------- */
+@layer base {
+  html {
+    background-color: var(--color-ink);
+    color: #fff;
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-ink);
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background-color: var(--color-laranja);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ciano-200);
+    outline-offset: 3px;
+  }
 }
