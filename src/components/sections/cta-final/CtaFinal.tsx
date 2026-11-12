@@ -13,7 +13,7 @@ import { FinalGridDistortion } from "@/webgl/backgrounds/FinalGridDistortion";
 import { FazerParteButton } from "./FazerParteButton";
 import { asset } from "@/lib/asset";
 
-const FOTO_FUNDO = asset("/images/equipe-cta-final.png");
+const FOTO_FUNDO = asset("/images/equipe-cta-final.webp");
 
 /**
  * Seção 7 — "Agora é a sua vez" + rodapé (Figma: "BG Hover final" + "SEÇÃO 7",

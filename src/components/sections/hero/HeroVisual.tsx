@@ -36,7 +36,7 @@ export function HeroVisual() {
           style={place(228.9, 246.76, 961.37, 936.8)}
         >
           <Image
-            src={asset("/images/hero-camada-brilho.png")}
+            src={asset("/images/hero-camada-brilho.webp")}
             alt=""
             fill
             sizes="(min-width: 1024px) 50vw, 80vw"
@@ -45,7 +45,7 @@ export function HeroVisual() {
           />
         </div>
         <Image
-          src={asset("/images/hero-equipe.png")}
+          src={asset("/images/hero-equipe.webp")}
           alt="Equipe da E² Company"
           fill
           priority

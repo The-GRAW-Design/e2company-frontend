@@ -10,7 +10,7 @@ import { place, u } from "@/lib/design";
 import { asset } from "@/lib/asset";
 
 const FOTO = {
-  src: asset("/images/proposito-equipe.png"),
+  src: asset("/images/proposito-equipe.webp"),
   alt: "Sócios da E² Company conversando sobre o propósito da empresa",
 };
 

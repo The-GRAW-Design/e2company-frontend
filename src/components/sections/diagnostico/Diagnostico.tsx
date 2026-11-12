@@ -9,7 +9,7 @@ import { Checklist } from "./Checklist";
 import { asset } from "@/lib/asset";
 
 const FOTO = {
-  src: asset("/images/foto-edu.png"),
+  src: asset("/images/foto-edu.webp"),
   alt: "Consultor da E² Company trabalhando no notebook",
 };
 
