@@ -63,7 +63,7 @@ mobile.
 | Propósito   | GradientText, ScrollExpand, AnimatedContent                                                         |
 | Crescimento | EchoText, ScrollReveal, StarBorder, LogoLoop                                                        |
 | FAQ         | FuzzyText, LogoLoop, **FloatingLines** (WebGL)                                                      |
-| CTA final   | **GridDistortion** (WebGL), Noise, Shuffle, BlurText, **FlyingButton** (WebGL)                      |
+| CTA final   | **GridDistortion** (WebGL), Noise, Shuffle, BlurText, SpecularButton, Magnet                        |
 
 Para adicionar outro componente:
 
@@ -75,13 +75,14 @@ O servidor MCP do shadcn já está configurado em `.mcp.json`
 (`npx shadcn@latest mcp init --client claude`).
 
 Os componentes em `src/components/reactbits/` são código de terceiros (ficam
-fora do ESLint e do Prettier). Dois deles têm patches locais comentados:
-`ScrollFloat` (limpeza de transform ao reexecutar o efeito) e `ScrollReveal`
-(tag configurável e texto acessível).
+fora do ESLint e do Prettier). Três deles têm patches locais comentados:
+`ScrollFloat` (limpeza de transform ao reexecutar o efeito), `ScrollReveal`
+(tag configurável e texto acessível) e `SpecularButton` (não força a perda do
+contexto WebGL na desmontagem).
 
 ## Acessibilidade e desempenho
 
-- `prefers-reduced-motion` desliga o Lenis, os fundos WebGL e o FlyingButton.
+- `prefers-reduced-motion` desliga o Lenis e os fundos WebGL.
 - Fundos WebGL montam só quando a seção se aproxima da tela e pausam fora dela.
 - `ScrollTrigger.refresh()` roda quando fontes e layout mudam de altura.
 - Fotos em WebP no tamanho de exibição (o export estático não otimiza imagens).
