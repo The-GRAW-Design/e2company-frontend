@@ -18,6 +18,11 @@ type DescricaoCardProps = {
   title: string;
   children: ReactNode;
   icon?: DescricaoIcon;
+  /**
+   * `false` remove borda, fundo e sombra — usado quando o card fica dentro de
+   * um wrapper que já desenha a superfície (ex.: SpotlightCard).
+   */
+  surface?: boolean;
   className?: string;
   style?: CSSProperties;
 };
@@ -31,19 +36,24 @@ export function DescricaoCard({
   title,
   children,
   icon,
+  surface = true,
   className,
   style,
 }: DescricaoCardProps) {
   return (
     <article
       className={cn(
-        "@container relative isolate overflow-hidden rounded-2xl border border-laranja shadow-card-profundo",
+        "@container relative isolate overflow-hidden rounded-2xl",
+        surface && "border border-laranja shadow-card-profundo",
         className,
       )}
       style={style}
     >
       <div
-        className="relative flex h-full flex-col bg-card-profundo [--u:calc(100cqw/526)]"
+        className={cn(
+          "relative flex h-full flex-col [--u:calc(100cqw/526)]",
+          surface && "bg-card-profundo",
+        )}
         style={{
           minHeight: u(613),
           gap: u(19),
