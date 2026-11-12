@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Consultoria } from "@/components/sections/consultoria/Consultoria";
 import { Crescimento } from "@/components/sections/crescimento/Crescimento";
 import { Diagnostico } from "@/components/sections/diagnostico/Diagnostico";
+import { Faq } from "@/components/sections/faq/Faq";
 import { Formulario } from "@/components/sections/formulario/Formulario";
 import { Hero } from "@/components/sections/hero/Hero";
 import { Proposito } from "@/components/sections/proposito/Proposito";
@@ -20,6 +21,7 @@ export default function Home() {
         <Diagnostico />
         <Proposito />
         <Crescimento />
+        <Faq />
       </main>
     </>
   );
