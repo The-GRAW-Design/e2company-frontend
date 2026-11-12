@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { siteConfig } from "@/config/site";
 import { Providers } from "@/providers";
 import { inter, sora } from "./fonts";
@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#050505",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
