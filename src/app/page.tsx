@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Consultoria } from "@/components/sections/consultoria/Consultoria";
+import { Diagnostico } from "@/components/sections/diagnostico/Diagnostico";
 import { Formulario } from "@/components/sections/formulario/Formulario";
 import { Hero } from "@/components/sections/hero/Hero";
 import { Metodologia } from "@/components/sections/metodologia/Metodologia";
@@ -14,6 +15,7 @@ export default function Home() {
         <Consultoria />
         <Formulario />
         <Metodologia />
+        <Diagnostico />
       </main>
     </>
   );
