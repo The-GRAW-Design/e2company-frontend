@@ -42,6 +42,7 @@ export function Header() {
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    aria-label={link.label}
                     className="text-[10px] tracking-[1px] text-white uppercase transition-colors hover:text-ciano-200"
                   >
                     <DecryptedText
