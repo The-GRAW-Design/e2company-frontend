@@ -6,6 +6,7 @@ import { useSmoothScroll } from "@/providers/SmoothScrollProvider";
 import { contactHref } from "@/config/site";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { CtaButton } from "@/components/ui/CtaButton";
+import { asset } from "@/lib/asset";
 
 const FlyingButton = dynamic(() => import("@/components/reactbits/FlyingButton"), { ssr: false });
 
@@ -43,7 +44,13 @@ export function FazerParteButton() {
       >
         <span className="flex items-center gap-2.5 font-semibold">
           Fazer parte
-          <Image src="/svg/seta-grande.svg" alt="" width={34.8757} height={34.8757} unoptimized />
+          <Image
+            src={asset("/svg/seta-grande.svg")}
+            alt=""
+            width={34.8757}
+            height={34.8757}
+            unoptimized
+          />
         </span>
       </FlyingButton>
     </div>

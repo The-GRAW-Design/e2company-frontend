@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/reactbits/ScrollReveal";
 import StarBorder from "@/components/reactbits/StarBorder";
 import { Container } from "@/components/layout/Container";
 import { Chip } from "@/components/ui/Chip";
+import { asset } from "@/lib/asset";
 
 const LINHAS_TITULO = ["A hora de", "crescer é", "agora"] as const;
 
@@ -20,7 +21,7 @@ const PARAGRAFOS = [
 const LOGOS: LogoItem[] = Array.from({ length: 5 }, (_, i) => ({
   node: (
     <Image
-      src="/svg/logo-e2-vertical-branco.svg"
+      src={asset("/svg/logo-e2-vertical-branco.svg")}
       alt=""
       width={607.58}
       height={557.52}

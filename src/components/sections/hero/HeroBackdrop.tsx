@@ -5,6 +5,7 @@ import { place, u } from "@/lib/design";
 import { HeroLightRays } from "@/webgl/backgrounds/HeroLightRays";
 import { HeroGhostCard } from "./HeroGhostCard";
 import { HeroTag } from "./HeroTag";
+import { asset } from "@/lib/asset";
 
 /**
  * Camada de fundo do hero (Figma: grupo "bg", parte superior). Coordenadas em
@@ -15,12 +16,18 @@ export function HeroBackdrop() {
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 [--u:calc(100cqw/1920)]">
       {/* Arcos azuis desfocados (Vector 2788:2023) */}
       <div className="absolute" style={place(-270, -346, 2385, 2845)}>
-        <Image src="/svg/bg-arcos-topo.svg" alt="" fill unoptimized className="max-w-none" />
+        <Image
+          src={asset("/svg/bg-arcos-topo.svg")}
+          alt=""
+          fill
+          unoptimized
+          className="max-w-none"
+        />
       </div>
 
       {/* Brilho central (Ellipse 10) */}
       <div className="absolute mix-blend-screen" style={place(582, 6, 1554, 1554)}>
-        <Image src="/svg/bg-glow-hero.svg" alt="" fill unoptimized />
+        <Image src={asset("/svg/bg-glow-hero.svg")} alt="" fill unoptimized />
       </div>
 
       {/* Raios de luz WebGL (React Bits: LightRays) */}

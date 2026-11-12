@@ -7,9 +7,10 @@ import ScrollExpand from "@/components/reactbits/ScrollExpand";
 import { Container } from "@/components/layout/Container";
 import { DescricaoCard } from "@/components/ui/DescricaoCard";
 import { place, u } from "@/lib/design";
+import { asset } from "@/lib/asset";
 
 const FOTO = {
-  src: "/images/proposito-equipe.png",
+  src: asset("/images/proposito-equipe.png"),
   alt: "Sócios da E² Company conversando sobre o propósito da empresa",
 };
 

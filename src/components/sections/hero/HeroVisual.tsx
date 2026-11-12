@@ -3,6 +3,7 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import Magnet from "@/components/reactbits/Magnet";
 import { place } from "@/lib/design";
 import { HeroTag } from "./HeroTag";
+import { asset } from "@/lib/asset";
 
 const tagMagnet = { padding: 90, magnetStrength: 3, maxOffset: 18 } as const;
 
@@ -25,17 +26,17 @@ export function HeroVisual() {
         className="absolute inset-0 [--u:calc(100cqw/1221.53)]"
       >
         <div className="absolute mix-blend-screen" style={place(228.9, 195.4, 782.72, 782.72)}>
-          <Image src="/svg/hero-glow-menor.svg" alt="" fill unoptimized aria-hidden />
+          <Image src={asset("/svg/hero-glow-menor.svg")} alt="" fill unoptimized aria-hidden />
         </div>
         <div className="absolute mix-blend-screen" style={place(107.19, 107.19, 1007.15, 1007.15)}>
-          <Image src="/svg/hero-glow-maior.svg" alt="" fill unoptimized aria-hidden />
+          <Image src={asset("/svg/hero-glow-maior.svg")} alt="" fill unoptimized aria-hidden />
         </div>
         <div
           className="absolute overflow-hidden rounded-full"
           style={place(228.9, 246.76, 961.37, 936.8)}
         >
           <Image
-            src="/images/hero-camada-brilho.png"
+            src={asset("/images/hero-camada-brilho.png")}
             alt=""
             fill
             sizes="(min-width: 1024px) 50vw, 80vw"
@@ -44,7 +45,7 @@ export function HeroVisual() {
           />
         </div>
         <Image
-          src="/images/hero-equipe.png"
+          src={asset("/images/hero-equipe.png")}
           alt="Equipe da E² Company"
           fill
           priority

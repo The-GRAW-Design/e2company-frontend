@@ -5,6 +5,7 @@ import type { MouseEventHandler, ReactNode } from "react";
 import GlareHover from "@/components/reactbits/GlareHover";
 import Magnet from "@/components/reactbits/Magnet";
 import { cn } from "@/lib/cn";
+import { asset } from "@/lib/asset";
 
 type Size = "lg" | "md" | "sm";
 
@@ -17,21 +18,21 @@ const SIZES: Record<
     box: "gap-2.5 px-[15px] py-4",
     text: "text-[16.4px]",
     radius: "45.6px",
-    arrow: { src: "/svg/seta-grande.svg", size: 34.8757 },
+    arrow: { src: asset("/svg/seta-grande.svg"), size: 34.8757 },
   },
   // Botão padrão do header / formulário (Figma: 16px, seta 22.67px)
   md: {
     box: "gap-[6.7px] px-2.5 py-[10.7px]",
     text: "text-base",
     radius: "29.7px",
-    arrow: { src: "/svg/seta-pequena.svg", size: 22.6667 },
+    arrow: { src: asset("/svg/seta-pequena.svg"), size: 22.6667 },
   },
   // Botão compacto da seção de diagnóstico (Figma: 10.67px)
   sm: {
     box: "gap-[6.7px] px-2.5 py-[10.7px]",
     text: "text-[10.7px] sm:text-xs",
     radius: "29.7px",
-    arrow: { src: "/svg/seta-pequena.svg", size: 22.6667 },
+    arrow: { src: asset("/svg/seta-pequena.svg"), size: 22.6667 },
   },
 };
 
