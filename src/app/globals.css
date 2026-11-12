@@ -35,14 +35,22 @@
  * Gradientes do design como utilitários
  * ------------------------------------------------------------- */
 @utility text-gradient-ciano {
-  background-image: linear-gradient(100deg, var(--color-ciano) 5.83%, var(--color-ciano-200) 100.66%);
+  background-image: linear-gradient(
+    100deg,
+    var(--color-ciano) 5.83%,
+    var(--color-ciano-200) 100.66%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
 @utility text-gradient-ciano-claro {
-  background-image: linear-gradient(110deg, var(--color-ciano-500) 5.83%, var(--color-ciano-200) 100.66%);
+  background-image: linear-gradient(
+    110deg,
+    var(--color-ciano-500) 5.83%,
+    var(--color-ciano-200) 100.66%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -56,27 +64,47 @@
 }
 
 @utility text-gradient-laranja {
-  background-image: linear-gradient(170deg, var(--color-laranja) 11.49%, var(--color-laranja-700) 114.91%);
+  background-image: linear-gradient(
+    170deg,
+    var(--color-laranja) 11.49%,
+    var(--color-laranja-700) 114.91%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
 @utility bg-gradient-laranja {
-  background-image: linear-gradient(162deg, var(--color-laranja) 11.49%, var(--color-laranja-700) 114.91%);
+  background-image: linear-gradient(
+    162deg,
+    var(--color-laranja) 11.49%,
+    var(--color-laranja-700) 114.91%
+  );
 }
 
 @utility bg-gradient-laranja-claro {
-  background-image: linear-gradient(173deg, var(--color-laranja) 39.58%, var(--color-laranja-300) 115.27%);
+  background-image: linear-gradient(
+    173deg,
+    var(--color-laranja) 39.58%,
+    var(--color-laranja-300) 115.27%
+  );
 }
 
 @utility bg-gradient-ciano {
-  background-image: linear-gradient(99deg, var(--color-ciano) 5.83%, var(--color-ciano-200) 100.66%);
+  background-image: linear-gradient(
+    99deg,
+    var(--color-ciano) 5.83%,
+    var(--color-ciano-200) 100.66%
+  );
 }
 
 /* Tags flutuantes do hero (Frame 44-47) */
 @utility bg-gradient-navy {
-  background-image: linear-gradient(205deg, var(--color-navy-700) 33.27%, var(--color-navy-950) 110.07%);
+  background-image: linear-gradient(
+    205deg,
+    var(--color-navy-700) 33.27%,
+    var(--color-navy-950) 110.07%
+  );
 }
 
 /* Cards "Descrição" da seção de consultoria */
