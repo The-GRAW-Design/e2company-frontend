@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="2398.62" height="2861.49" viewBox="0 0 2398.62 2861.49" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Vector" opacity="0.19" filter="url(#filter0_f_0_436)">
+<use xlink:href="#stroke0_0_436" fill="#2588C3" fill-opacity="0.54"/>
+<mask id="stroke1_0_436" fill="white">
+<use xlink:href="#stroke0_0_436"/>
+</mask>
+<path d="M241.441 1894.94C188.236 98.2319 2148.35 193.451 1811.47 978.969C1473.66 1420.04 336.957 1233.54 410.148 2165.41C606.862 2996.63 1865.28 2858.8 2290.46 2358.51C2308.84 2289.53 2290.46 1861.89 2290.46 1861.89C2187.85 2064.91 1732.6 2360.55 1427.67 2386.08C1216.52 2416.6 957.51 2378.49 806.182 2226.09C708.661 2118.22 733.659 1911.54 912.86 1795.64C1145.53 1659.07 1622.58 1601.06 1894.56 1406.61C2266.19 1130.52 2407.76 672.919 2028.3 305.758C1819.76 105.757 1483.42 62.9996 1156.09 128.471C260.157 278.613 -133.805 1185.72 241.441 1894.94Z" stroke-width="2" stroke="white" mask="url(#stroke1_0_436)"/>
+</g>
+<defs>
+<filter id="filter0_f_0_436" x="4.94111e-07" y="1.55692e-06" width="2398.62" height="2861.49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_0_436"/>
+</filter>
+<path id="stroke0_0_436" d="M241.441 1894.94C188.236 98.2319 2148.35 193.451 1811.47 978.969C1473.66 1420.04 336.957 1233.54 410.148 2165.41C606.862 2996.63 1865.28 2858.8 2290.46 2358.51C2308.84 2289.53 2290.46 1861.89 2290.46 1861.89C2187.85 2064.91 1732.6 2360.55 1427.67 2386.08C1216.52 2416.6 957.51 2378.49 806.182 2226.09C708.661 2118.22 733.659 1911.54 912.86 1795.64C1145.53 1659.07 1622.58 1601.06 1894.56 1406.61C2266.19 1130.52 2407.76 672.919 2028.3 305.758C1819.76 105.757 1483.42 62.9996 1156.09 128.471C260.157 278.613 -133.805 1185.72 241.441 1894.94Z"/>
+</defs>
+</svg>

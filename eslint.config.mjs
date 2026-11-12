@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Componentes de terceiros instalados via registro @react-bits (shadcn).
+    "src/components/reactbits/**",
   ]),
 ]);
 
