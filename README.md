@@ -51,19 +51,19 @@ mobile.
 
 ## Animações (React Bits)
 
-| Seção | Componentes |
-| --- | --- |
-| Global | ClickSpark, Magnet, GlareHover |
-| Header | AnimatedContent, DecryptedText, StarBorder |
-| Hero | MaskedHeading, TextType, DecryptedText, FadeContent, AnimatedContent, Magnet, **LightRays** (WebGL) |
-| Consultoria | SplitText, SpotlightCard, AnimatedContent |
-| Formulário | ShinyText, GradientText, CountUp, ElectricBorder, GlideSelect, JellyRadio, BlurText, FadeContent |
-| Metodologia | ScrollFloat, GlareHover, BorderGlow, AnimatedContent, FadeContent |
-| Diagnóstico | FoldText, BlurText, SpringCheck, ShinyText, **SideRays** (WebGL) |
-| Propósito | GradientText, ScrollExpand, AnimatedContent |
-| Crescimento | EchoText, ScrollReveal, StarBorder, LogoLoop |
-| FAQ | FuzzyText, LogoLoop, **FloatingLines** (WebGL) |
-| CTA final | **GridDistortion** (WebGL), Noise, Shuffle, BlurText, **FlyingButton** (WebGL) |
+| Seção       | Componentes                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------------------- |
+| Global      | ClickSpark, Magnet, GlareHover                                                                      |
+| Header      | AnimatedContent, DecryptedText, StarBorder                                                          |
+| Hero        | MaskedHeading, TextType, DecryptedText, FadeContent, AnimatedContent, Magnet, **LightRays** (WebGL) |
+| Consultoria | SplitText, SpotlightCard, AnimatedContent                                                           |
+| Formulário  | ShinyText, GradientText, CountUp, ElectricBorder, GlideSelect, JellyRadio, BlurText, FadeContent    |
+| Metodologia | ScrollFloat, GlareHover, BorderGlow, AnimatedContent, FadeContent                                   |
+| Diagnóstico | FoldText, BlurText, SpringCheck, ShinyText, **SideRays** (WebGL)                                    |
+| Propósito   | GradientText, ScrollExpand, AnimatedContent                                                         |
+| Crescimento | EchoText, ScrollReveal, StarBorder, LogoLoop                                                        |
+| FAQ         | FuzzyText, LogoLoop, **FloatingLines** (WebGL)                                                      |
+| CTA final   | **GridDistortion** (WebGL), Noise, Shuffle, BlurText, **FlyingButton** (WebGL)                      |
 
 Para adicionar outro componente:
 
