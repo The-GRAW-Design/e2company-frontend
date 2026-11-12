@@ -3,6 +3,7 @@ import FadeContent from "@/components/reactbits/FadeContent";
 import { Container } from "@/components/layout/Container";
 import { Beneficios } from "./Beneficios";
 import { ContatoForm } from "./ContatoForm";
+import { asset } from "@/lib/asset";
 
 /**
  * Seção 3 — formulário de contato (Figma: "SEÇÃO 3", caixa de 1640×853).
@@ -24,7 +25,7 @@ export function Formulario() {
         >
           {/* Linhas decorativas (Figma: Vector 2788:2155, x 59 / y 8 na caixa) */}
           <Image
-            src="/svg/form-decoracao.svg"
+            src={asset("/svg/form-decoracao.svg")}
             alt=""
             width={698}
             height={845}

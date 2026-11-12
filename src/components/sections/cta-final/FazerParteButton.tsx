@@ -1,51 +1,48 @@
 "use client";
 
 import Image from "next/image";
-import dynamic from "next/dynamic";
-import { useSmoothScroll } from "@/providers/SmoothScrollProvider";
+import Magnet from "@/components/reactbits/Magnet";
+import SpecularButton from "@/components/reactbits/SpecularButton";
 import { contactHref } from "@/config/site";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { CtaButton } from "@/components/ui/CtaButton";
-
-const FlyingButton = dynamic(() => import("@/components/reactbits/FlyingButton"), { ssr: false });
+import { asset } from "@/lib/asset";
+import { useSmoothScroll } from "@/providers/SmoothScrollProvider";
 
 /**
- * "Fazer parte" do CTA final. React Bits: FlyingButton — o botão liga os
- * propulsores no hover e decola numa nuvem de fumaça WebGL. Com movimento
- * reduzido, cai no botão padrão do site.
+ * "Fazer parte" do CTA final. React Bits: SpecularButton — a borda do botão
+ * pega a luz e o reflexo desliza em direção ao cursor — dentro de um Magnet,
+ * que puxa o botão para o ponteiro. Leva ao formulário de contato.
  */
 export function FazerParteButton() {
   const { scrollTo } = useSmoothScroll();
-  const reducedMotion = useReducedMotion();
-
-  if (reducedMotion) {
-    return (
-      <CtaButton href={contactHref} size="lg">
-        Fazer parte
-      </CtaButton>
-    );
-  }
 
   return (
-    <div className="pointer-events-none relative -mt-36 h-[240px] w-[260px] lg:pointer-events-auto lg:mt-0 lg:-translate-y-[64px] [&_button]:pointer-events-auto">
-      <FlyingButton
-        size="extra-large"
+    <Magnet padding={80} magnetStrength={3} maxOffset={16}>
+      <SpecularButton
+        size="lg"
         radius={45.6}
-        buttonColor="linear-gradient(152deg, #ff820d 11.49%, #e24f00 114.91%)"
+        tint="#ff820d"
+        tintOpacity={1}
         textColor="#ffffff"
-        thrustColor="#ffb25a"
-        smokeColor="#abdbf8"
-        altitude={0.35}
-        smoke={0.7}
-        wobble={0.4}
+        lineColor="#ffffff"
+        baseColor="#ffb25a"
+        intensity={1.2}
+        idleIntensity={0.5}
+        glow={1.1}
+        followMouse
+        autoAnimate
         onClick={() => scrollTo(contactHref)}
-        className="min-h-[240px]! overflow-visible!"
+        className="gap-2.5! px-[15px]! py-4! text-[16.4px]! font-semibold! whitespace-nowrap"
+        style={{ background: "linear-gradient(152deg, #ff820d 11.49%, #e24f00 114.91%)" }}
       >
-        <span className="flex items-center gap-2.5 font-semibold">
-          Fazer parte
-          <Image src="/svg/seta-grande.svg" alt="" width={34.8757} height={34.8757} unoptimized />
-        </span>
-      </FlyingButton>
-    </div>
+        Fazer parte
+        <Image
+          src={asset("/svg/seta-grande.svg")}
+          alt=""
+          width={34.8757}
+          height={34.8757}
+          unoptimized
+        />
+      </SpecularButton>
+    </Magnet>
   );
 }

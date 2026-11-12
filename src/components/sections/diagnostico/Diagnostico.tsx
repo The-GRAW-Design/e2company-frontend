@@ -6,9 +6,10 @@ import { Container } from "@/components/layout/Container";
 import { place } from "@/lib/design";
 import { DiagnosticoSideRays } from "@/webgl/backgrounds/DiagnosticoSideRays";
 import { Checklist } from "./Checklist";
+import { asset } from "@/lib/asset";
 
 const FOTO = {
-  src: "/images/foto-edu.png",
+  src: asset("/images/foto-edu.webp"),
   alt: "Consultor da E² Company trabalhando no notebook",
 };
 
@@ -30,7 +31,7 @@ export function Diagnostico() {
         className="pointer-events-none absolute inset-x-0 top-0 hidden [--u:calc(100cqw/1920)] lg:block"
       >
         <div className="absolute mix-blend-screen" style={place(485, -339, 2890, 2890)}>
-          <Image src="/svg/luz-edu.svg" alt="" fill unoptimized />
+          <Image src={asset("/svg/luz-edu.svg")} alt="" fill unoptimized />
         </div>
         <AnimatedContent
           direction="horizontal"

@@ -10,6 +10,7 @@ import { CtaButton } from "@/components/ui/CtaButton";
 import { contactHref } from "@/config/site";
 import { cn } from "@/lib/cn";
 import { LIMITE_ALERTA, situacoes } from "./data";
+import { asset } from "@/lib/asset";
 
 /**
  * Checklist interativo "Marque as situações que estão travando seu negócio".
@@ -79,7 +80,13 @@ export function Checklist() {
         </CtaButton>
         <Magnet padding={60} magnetStrength={3}>
           <a href={contactHref} aria-label="Falar com a E² Company">
-            <Image src="/svg/icone-e2-circulo.svg" alt="" width={44} height={44} unoptimized />
+            <Image
+              src={asset("/svg/icone-e2-circulo.svg")}
+              alt=""
+              width={44}
+              height={44}
+              unoptimized
+            />
           </a>
         </Magnet>
       </div>

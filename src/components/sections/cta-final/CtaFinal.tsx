@@ -11,13 +11,14 @@ import { siteConfig } from "@/config/site";
 import { u } from "@/lib/design";
 import { FinalGridDistortion } from "@/webgl/backgrounds/FinalGridDistortion";
 import { FazerParteButton } from "./FazerParteButton";
+import { asset } from "@/lib/asset";
 
-const FOTO_FUNDO = "/images/equipe-cta-final.png";
+const FOTO_FUNDO = asset("/images/equipe-cta-final.webp");
 
 /**
  * Seção 7 — "Agora é a sua vez" + rodapé (Figma: "BG Hover final" + "SEÇÃO 7",
  * y 7639 até 8772). React Bits: GridDistortion (foto que se parte sob o
- * cursor), Noise, Shuffle, BlurText, FlyingButton, AnimatedContent e FadeContent.
+ * cursor), Noise, Shuffle, BlurText, SpecularButton, AnimatedContent e FadeContent.
  */
 export function CtaFinal() {
   return (
@@ -77,7 +78,13 @@ export function CtaFinal() {
           className="mt-auto py-10 lg:mt-[7.81cqw] lg:pb-[1.56cqw]"
         >
           <p className="flex items-center justify-center gap-1 text-[10px] text-white uppercase">
-            <Image src="/svg/icone-link.svg" alt="" width={10.9876} height={10.9876} unoptimized />
+            <Image
+              src={asset("/svg/icone-link.svg")}
+              alt=""
+              width={10.9876}
+              height={10.9876}
+              unoptimized
+            />
             <span>
               DESENVOLVIDO POR <strong className="font-semibold">{siteConfig.credit.label}</strong>
             </span>
