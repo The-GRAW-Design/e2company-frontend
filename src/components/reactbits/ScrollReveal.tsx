@@ -26,6 +26,8 @@ type RevealMode = 'scrub' | 'enter';
 
 interface ScrollRevealProps {
   children: ReactNode;
+  /** Patch local (e2company): tag do container (padrão h2, como no original). */
+  as?: 'h1' | 'h2' | 'h3' | 'p' | 'div';
   scrollContainerRef?: RefObject<HTMLElement | null>;
   enableBlur?: boolean;
   baseOpacity?: number;
@@ -102,6 +104,7 @@ const paintPiece = (piece: HTMLElement, t: number, look: RevealLook) => {
 
 const ScrollReveal: React.FC<ScrollRevealProps> = ({
   children,
+  as: Tag = 'h2',
   scrollContainerRef,
   enableBlur = true,
   baseOpacity = 0.1,
@@ -120,7 +123,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   rotationEnd = 'bottom bottom',
   wordAnimationEnd = 'bottom bottom'
 }) => {
-  const containerRef = useRef<HTMLHeadingElement>(null);
+  const containerRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLSpanElement>(null);
 
   const text = useMemo(() => {
@@ -333,7 +336,9 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   ]);
 
   return (
-    <h2 ref={containerRef} className={`my-5 ${containerClassName}`} aria-label={text ?? undefined}>
+    <Tag ref={containerRef as React.RefObject<never>} className={`my-5 ${containerClassName}`}>
+      {/* Patch local (e2company): texto acessível em sr-only, pois aria-label não vale para <p>. */}
+      {text !== null && <span className="sr-only">{text}</span>}
       <span
         ref={textRef}
         className={`block text-[clamp(1.6rem,4vw,3rem)] leading-[1.5] font-semibold ${textClassName}`}
@@ -341,7 +346,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       >
         {splitText ?? children}
       </span>
-    </h2>
+    </Tag>
   );
 };
 
