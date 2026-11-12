@@ -24,7 +24,7 @@ function ChipBrilho({ blur }: { blur?: number }) {
       glareSize={160}
       className="border-0!"
     >
-      <Chip variant="ciano" blur={blur} className="rounded-none">
+      <Chip variant="ciano" blur={blur} className="rounded-none whitespace-nowrap">
         Nosso modo de agir
       </Chip>
     </GlareHover>
@@ -55,30 +55,33 @@ export function Metodologia() {
       </FadeContent>
 
       <Container className="grid gap-12 lg:grid-cols-[minmax(0,939px)_minmax(0,621px)] lg:justify-between lg:gap-10">
-        <div className="relative text-[length:clamp(44px,6.5cqw,124.8px)] lg:pl-2">
-          <ScrollFloat
-            splitBy="words"
-            effect="float"
-            distance={110}
-            stagger={0.05}
-            scrollStart="top bottom-=10%"
-            scrollEnd="bottom center"
-            containerClassName="my-0!"
-            textClassName="text-[length:inherit]! font-display font-bold! uppercase leading-[1.16]! tracking-[-0.06em] text-left! [&_[data-word]]:text-gradient-prata"
-          >
-            Conheça a metodologia E² Company
-          </ScrollFloat>
+        {/* Fonte proporcional à coluna: 124.8px em 939px (13.29cqw) */}
+        <div className="@container lg:pl-2">
+          <div className="relative text-[length:clamp(40px,13.29cqw,124.8px)]">
+            <ScrollFloat
+              splitBy="words"
+              effect="float"
+              distance={110}
+              stagger={0.05}
+              scrollStart="top bottom-=10%"
+              scrollEnd="bottom center"
+              containerClassName="my-0!"
+              textClassName="text-[length:inherit]! font-display font-bold! uppercase leading-[1.16]! tracking-[-0.06em] text-left! [&_[data-word]]:text-gradient-prata"
+            >
+              Conheça a metodologia E² Company
+            </ScrollFloat>
 
-          {/* Selos posicionados em em (relativos ao tamanho do título), como no Figma */}
-          <div
-            aria-hidden
-            className="absolute hidden lg:block"
-            style={{ left: "-0.17em", top: "1.19em" }}
-          >
-            <ChipBrilho blur={6.45} />
-          </div>
-          <div className="mt-6 lg:absolute lg:mt-0" style={{ left: "5.63em", top: "3.08em" }}>
-            <ChipBrilho />
+            {/* Selos posicionados em em (relativos ao tamanho do título), como no Figma */}
+            <div
+              aria-hidden
+              className="absolute hidden lg:block"
+              style={{ left: "-0.17em", top: "1.19em" }}
+            >
+              <ChipBrilho blur={6.45} />
+            </div>
+            <div className="mt-6 lg:absolute lg:mt-0" style={{ left: "5.63em", top: "3.08em" }}>
+              <ChipBrilho />
+            </div>
           </div>
         </div>
 
