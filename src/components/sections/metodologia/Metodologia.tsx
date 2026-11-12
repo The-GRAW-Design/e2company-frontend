@@ -58,7 +58,9 @@ export function Metodologia() {
       <Container className="grid gap-12 lg:grid-cols-[minmax(0,939px)_minmax(0,621px)] lg:justify-between lg:gap-10">
         {/* Fonte proporcional à coluna: 124.8px em 939px (13.29cqw) */}
         <div className="@container lg:pl-2">
-          <div className="relative text-[length:clamp(40px,13.29cqw,124.8px)]">
+          {/* Camadas como no Figma: selo desfocado (2788:2144) atrás do título,
+              selo nítido (2788:2152) na frente. */}
+          <div className="relative isolate text-[length:clamp(40px,13.29cqw,124.8px)]">
             <ScrollFloat
               splitBy="words"
               effect="float"
@@ -66,7 +68,7 @@ export function Metodologia() {
               stagger={0.05}
               scrollStart="top bottom-=10%"
               scrollEnd="bottom center"
-              containerClassName="my-0!"
+              containerClassName="my-0! relative z-[1]"
               textClassName="text-[length:inherit]! font-display font-bold! uppercase leading-[1.16]! tracking-[-0.06em] text-left! [&_[data-word]]:text-gradient-prata"
             >
               Conheça a metodologia E² Company
@@ -75,12 +77,15 @@ export function Metodologia() {
             {/* Selos posicionados em em (relativos ao tamanho do título), como no Figma */}
             <div
               aria-hidden
-              className="absolute hidden lg:block"
+              className="absolute z-0 hidden lg:block"
               style={{ left: "-0.17em", top: "1.19em" }}
             >
               <ChipBrilho blur={6.45} />
             </div>
-            <div className="mt-6 lg:absolute lg:mt-0" style={{ left: "5.63em", top: "3.08em" }}>
+            <div
+              className="relative z-[2] mt-6 lg:absolute lg:mt-0"
+              style={{ left: "5.63em", top: "3.08em" }}
+            >
               <ChipBrilho />
             </div>
           </div>
