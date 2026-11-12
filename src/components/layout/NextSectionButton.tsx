@@ -20,7 +20,7 @@ export function NextSectionButton() {
   }
 
   return (
-    <div className="fixed top-[56%] right-[3.85%] z-40 hidden -translate-y-1/2 lg:block">
+    <div className="fixed top-[56%] right-[3.85%] z-40 hidden -translate-y-1/2 2xl:block">
       <AnimatedContent trigger="mount" delay={2} distance={30} blur={6} duration={0.9}>
         <Magnet padding={50} magnetStrength={2.5} maxOffset={10}>
           <button

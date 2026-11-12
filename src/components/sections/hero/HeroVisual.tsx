@@ -14,7 +14,7 @@ const tagMagnet = { padding: 90, magnetStrength: 3, maxOffset: 18 } as const;
 export function HeroVisual() {
   return (
     // Desktop: x 700, y 25, largura 1221.53 no frame de 1920 (36.458cqw / 1.302cqw / 63.621cqw).
-    <div className="@container relative mx-auto mt-12 aspect-[1221.53/1220.41] w-full max-w-[640px] lg:absolute lg:top-[1.302cqw] lg:left-[36.458cqw] lg:mt-0 lg:w-[63.621cqw] lg:max-w-none">
+    <div className="@container relative mx-auto mt-12 aspect-[1221.53/1220.41] w-[76%] max-w-[640px] sm:w-[88%] lg:absolute lg:top-[1.302cqw] lg:left-[36.458cqw] lg:mt-0 lg:w-[63.621cqw] lg:max-w-none">
       <AnimatedContent
         trigger="mount"
         distance={90}

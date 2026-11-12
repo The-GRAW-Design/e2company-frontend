@@ -8,7 +8,7 @@ import Noise from "@/components/reactbits/Noise";
 import Shuffle from "@/components/reactbits/Shuffle";
 import { Container } from "@/components/layout/Container";
 import { siteConfig } from "@/config/site";
-import { place, u } from "@/lib/design";
+import { u } from "@/lib/design";
 import { FinalGridDistortion } from "@/webgl/backgrounds/FinalGridDistortion";
 import { FazerParteButton } from "./FazerParteButton";
 
@@ -28,7 +28,8 @@ export function CtaFinal() {
     >
       {/* Fundo: foto da equipe (2036×1278 em x -58) + véu escuro de 84% */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute" style={place(-58, 0, 2036, 1278)}>
+        {/* Mobile: cobre a seção toda; desktop: 2036×1278 em x -58, como no Figma. */}
+        <div className="absolute inset-0 lg:inset-auto lg:top-0 lg:left-[calc(-58*var(--u))] lg:h-[calc(1278*var(--u))] lg:w-[calc(2036*var(--u))]">
           <Image src={FOTO_FUNDO} alt="" fill sizes="106vw" className="object-cover object-top" />
           <FinalGridDistortion src={FOTO_FUNDO} />
         </div>
