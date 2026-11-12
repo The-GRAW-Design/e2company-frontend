@@ -18,7 +18,7 @@ const FOTO_FUNDO = asset("/images/equipe-cta-final.webp");
 /**
  * Seção 7 — "Agora é a sua vez" + rodapé (Figma: "BG Hover final" + "SEÇÃO 7",
  * y 7639 até 8772). React Bits: GridDistortion (foto que se parte sob o
- * cursor), Noise, Shuffle, BlurText, FlyingButton, AnimatedContent e FadeContent.
+ * cursor), Noise, Shuffle, BlurText, SpecularButton, AnimatedContent e FadeContent.
  */
 export function CtaFinal() {
   return (
