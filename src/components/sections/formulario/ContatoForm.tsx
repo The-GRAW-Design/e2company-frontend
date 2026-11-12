@@ -17,13 +17,16 @@ const inputClass =
 
 function Label({ htmlFor, id, children }: { htmlFor?: string; id?: string; children: ReactNode }) {
   return (
-    <label
-      htmlFor={htmlFor}
-      id={id}
-      className="flex items-center gap-[5px] text-sm text-white uppercase sm:text-base"
-    >
+    <label htmlFor={htmlFor} id={id} className="text-sm text-white uppercase sm:text-base">
       {children}
-      <Image src="/svg/ponto-obrigatorio.svg" alt="" width={4} height={4} unoptimized />
+      <Image
+        src="/svg/ponto-obrigatorio.svg"
+        alt=""
+        width={4}
+        height={4}
+        unoptimized
+        className="ml-[5px] inline-block align-middle"
+      />
       <span className="sr-only">(obrigatório)</span>
     </label>
   );
