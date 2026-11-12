@@ -3,6 +3,7 @@ import { Consultoria } from "@/components/sections/consultoria/Consultoria";
 import { Diagnostico } from "@/components/sections/diagnostico/Diagnostico";
 import { Formulario } from "@/components/sections/formulario/Formulario";
 import { Hero } from "@/components/sections/hero/Hero";
+import { Proposito } from "@/components/sections/proposito/Proposito";
 import { Metodologia } from "@/components/sections/metodologia/Metodologia";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <Formulario />
         <Metodologia />
         <Diagnostico />
+        <Proposito />
       </main>
     </>
   );
