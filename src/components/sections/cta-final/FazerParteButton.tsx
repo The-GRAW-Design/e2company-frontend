@@ -27,7 +27,7 @@ export function FazerParteButton() {
   }
 
   return (
-    <div className="relative -my-16 h-[240px] w-[260px] lg:my-0 lg:-translate-y-[64px]">
+    <div className="pointer-events-none relative -mt-36 h-[240px] w-[260px] lg:pointer-events-auto lg:mt-0 lg:-translate-y-[64px] [&_button]:pointer-events-auto">
       <FlyingButton
         size="extra-large"
         radius={45.6}
