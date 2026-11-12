@@ -64,7 +64,7 @@ export function Metodologia() {
             scrollStart="top bottom-=10%"
             scrollEnd="bottom center"
             containerClassName="my-0!"
-            textClassName="text-[length:inherit]! font-display font-bold! uppercase leading-[0.92]! tracking-[-0.06em] text-left! [&_[data-word]]:text-gradient-prata"
+            textClassName="text-[length:inherit]! font-display font-bold! uppercase leading-[1.16]! tracking-[-0.06em] text-left! [&_[data-word]]:text-gradient-prata"
           >
             Conheça a metodologia E² Company
           </ScrollFloat>
@@ -77,7 +77,7 @@ export function Metodologia() {
           >
             <ChipBrilho blur={6.45} />
           </div>
-          <div className="mt-6 lg:absolute lg:mt-0" style={{ left: "5.63em", top: "2.78em" }}>
+          <div className="mt-6 lg:absolute lg:mt-0" style={{ left: "5.63em", top: "3.08em" }}>
             <ChipBrilho />
           </div>
         </div>
