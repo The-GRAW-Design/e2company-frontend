@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Consultoria } from "@/components/sections/consultoria/Consultoria";
+import { CtaFinal } from "@/components/sections/cta-final/CtaFinal";
 import { Crescimento } from "@/components/sections/crescimento/Crescimento";
 import { Diagnostico } from "@/components/sections/diagnostico/Diagnostico";
 import { Faq } from "@/components/sections/faq/Faq";
@@ -22,6 +23,7 @@ export default function Home() {
         <Proposito />
         <Crescimento />
         <Faq />
+        <CtaFinal />
       </main>
     </>
   );
